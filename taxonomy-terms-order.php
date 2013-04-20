@@ -13,7 +13,7 @@ Author Email: electronice_delphi@yahoo.com
 define('TOPATH',    plugin_dir_path(__FILE__));
 define('TOURL',     plugins_url('', __FILE__));
 
-load_plugin_textdomain('to', FALSE, TOPATH. "/lang/");
+load_plugin_textdomain( 'to', FALSE, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
 
 register_deactivation_hook(__FILE__, 'TO_deactivated');
 register_activation_hook(__FILE__, 'TO_activated');
